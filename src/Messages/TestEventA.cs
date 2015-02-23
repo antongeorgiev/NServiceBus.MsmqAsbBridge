@@ -2,7 +2,7 @@
 {
     using NServiceBus;
 
-    public class TestEvent : IEvent
+    public class TestEventA : IEvent
     {
         public string Message;
     }

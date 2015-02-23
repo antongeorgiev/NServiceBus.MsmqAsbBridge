@@ -18,6 +18,10 @@ namespace MsmqEndpoint
             Console.WriteLine("Saying hi to Azure");
 
             _bus.Send(new TestCommand { Hello = "Azure", IAm = "Msmq" });
+
+            Console.WriteLine("Publishing event to Azure");
+            
+            _bus.Publish(new TestEventA { Message = "Hi from MSMQ" });
         }
 
         public void Stop()
